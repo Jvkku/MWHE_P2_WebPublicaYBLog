@@ -21,7 +21,9 @@
                         <a href="news.html" class="btn btn-menu-option">Noticias</a>
                     </div>
                 </div>
-                <a class="logo navbar-brand position-absolute top-50 start-50 translate-middle text-center" href="index.html">ANTÍDOTO CLUB</a>
+                <a class="logo navbar-brand position-absolute top-50 start-50 translate-middle text-center" href="index.html">
+                    <img src="media/img/AC_Logo_Black.png" alt="AC Logo" style="height: 50px;">
+                </a>
                 <div class="d-none d-md-flex search ms-3">
                     <input type="text" class="form-control" placeholder="Buscar aquí..." id="searchInput">
                     <button class="btn btn-yellow" onclick="searchFunction()"><i class="fa-solid fa-arrow-right"></i></button>
@@ -35,6 +37,13 @@
     <section class="hero py-5">
         <div class="container-fluid">
             <div class="row align-items-center">
+                <div class="col-md-7 video-container">
+                    <!-- Video -->
+                    <video autoplay muted loop class="hero-video">
+                        <source src="media/video/Video_Hero.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción del video.
+                    </video>
+                </div>
                 <div class="col-md-5 text-content">
                     <h1 class="display-1 text-primary">NUEVAS FECHAS</h1>
                     <p class="lead">
@@ -46,10 +55,16 @@
         </div>
     </section>
 
-    <section class="gallery container-fluid mt-5">
+    <div class="marquee-container">
+        <div class="marquee">
+            <span>Placeholder Text - Marquee Between Hero and CardsPlaceholder Text - Marquee Between Hero and Cards</span>
+        </div>
+    </div>
 
-        <div class="row justify-content-start">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-2 mb-4">
+    <section class="gallery container-fluid mt-5">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+            <!-- Primera card -->
+            <div class="col">
                 <div class="card">
                     <img src="media/img/Cartel1.jpg" class="card-img-top" alt="1">
                     <div class="card-body">
@@ -59,7 +74,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-2 mb-4">
+            <!-- Segunda card -->
+            <div class="col">
                 <div class="card">
                     <img src="media/img/Cartel2.jpg" class="card-img-top" alt="2">
                     <div class="card-body">
@@ -69,7 +85,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-2 mb-4">
+            <!-- Tercera card -->
+            <div class="col">
                 <div class="card">
                     <img src="media/img/Cartel3.jpg" class="card-img-top" alt="3">
                     <div class="card-body">
@@ -79,7 +96,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-2 mb-4">
+            <!-- Cuarta card -->
+            <div class="col">
                 <div class="card">
                     <img src="media/img/Cartel4.jpg" class="card-img-top" alt="4">
                     <div class="card-body">
@@ -89,7 +107,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-2 mb-4">
+            <!-- Quinta card -->
+            <div class="col">
                 <div class="card">
                     <img src="media/img/Cartel5.jpg" class="card-img-top" alt="5">
                     <div class="card-body">
@@ -99,7 +118,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-2 mb-4">
+            <!-- Sexta card -->
+            <div class="col">
                 <div class="card">
                     <img src="media/img/Cartel6.jpg" class="card-img-top" alt="6">
                     <div class="card-body">
@@ -111,6 +131,13 @@
             </div>
         </div>
     </section>
+
+    <div class="marquee-container">
+        <div class="marquee">
+            <span>Placeholder Text - Marquee Between Hero and CardsPlaceholder Text - Marquee Between Hero and Cards</span>
+        </div>
+    </div>
+    
     <section class="photos">
         <div class="carousel-container">
             <div class="carousel">

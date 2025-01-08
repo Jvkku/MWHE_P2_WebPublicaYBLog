@@ -54,12 +54,16 @@ body {
 }
 
 .navbar {
-    padding: 0;
-    margin: 20px 0 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Asegúrate de que esté sobre otros elementos */
+    transition: top 0.3s ease-in-out; /* Transición suave al aparecer/desaparecer */
 }
 
 nav .container {
-    margin: 0 20px;
+    margin: 10px 20px;
     padding: 0;
     max-width: 5000px;
     background-color: #75fb4c;
@@ -161,23 +165,32 @@ nav .container {
 }
 
 .hero {
-    background-color: #000000;
-    border-radius: 24px;
-    padding: 0 !important;
-    margin: 0 20px;
+    position: relative;
+    width: calc(100% - 40px); /* Código que queremos evitar */
     height: 85vh;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 24px;
+    margin: 0 auto;
 }
 
-.hero-img {
-    width: 90%;
-    height: 90%;
-    object-fit: cover;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    margin-top: 100px;
+.video-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video ocupe todo el contenedor */
+    z-index: 1;
 }
 
 .container-fluid {
@@ -191,21 +204,27 @@ nav .container {
 }
 
 .text-content {
-    padding: 3em;
-    padding-bottom: 0;
-    align-items: center;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 80%; /* Asegura que ocupe el ancho completo */
+    padding: 0 15px; /* Evita que el texto se salga en pantallas pequeñas */
+    box-sizing: border-box; /* Incluye el padding dentro del tamaño del contenedor */
 }
 
 .text-content h1 {
-    font-size: 4rem;
+    font-size: 3.5rem; /* Ajusta tamaño para pantallas medianas */
     font-weight: bold;
     color: #ffffff !important;
     font-family: 'Akony', sans-serif;
     text-align: center;
+    line-height: 1.2; /* Asegura un buen espaciado entre líneas */
+    word-wrap: break-word; /* Evita desbordamientos */
 }
 
 .text-content p {
@@ -235,11 +254,6 @@ button:active {
 .btn-pink:hover {
     background-color: #75fb4c;
     color: #000000;
-}
-
-.gallery {
-    background-color: #000000;
-    padding: 3vh;
 }
 
 .gallery h1 {
@@ -304,7 +318,7 @@ button:active {
 .carousel-container {
     position: relative; /* Necesario para que los controles se posicionen correctamente */
     width: 100%;
-    margin: 40px 20px;
+    margin: 0 20px;
     height: 80vh; /* Ajusta el tamaño del carrusel */
     overflow: hidden;
     border-radius: 10px;
@@ -373,6 +387,16 @@ button {
 
 button:hover {
     background: rgba(0, 0, 0, 0.7); /* Fondo más oscuro al pasar el mouse */
+}
+
+.marquee {
+    font-family: 'Akony', sans-serif;
+    font-size: 32px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #fff;
+    background-color: #000000;
+    margin: 24px 0;
 }
 
 .footer {
@@ -579,4 +603,18 @@ button:hover {
     .newartists div p {
         display: none;
     }
+
+    .text-content h1 {
+        font-size: 2.5rem; /* Reduce tamaño en móviles */
+    }
+
+    .text-content p {
+        font-size: 0.9rem; /* Ajusta el tamaño del texto */
+    }
+
+    .btn-pink {
+        font-size: 1rem; /* Reduce tamaño del botón */
+        padding: 8px 16px;
+    }
+
 }

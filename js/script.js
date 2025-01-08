@@ -108,3 +108,30 @@ document.addEventListener("DOMContentLoaded", () => {
     // Inicializa mostrando el primer slide
     showSlide(currentIndex);
 });
+
+let lastScrollTop = 0; // Guarda la posición previa del scroll
+const navbar = document.querySelector('.navbar'); // Selecciona la navbar
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        // Usuario está desplazándose hacia abajo
+        navbar.style.top = '-100px'; // Oculta la navbar (ajusta este valor según el tamaño de tu navbar)
+    } else {
+        // Usuario está desplazándose hacia arriba
+        navbar.style.top = '0'; // Muestra la navbar
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.querySelector('.navbar');
+    const hero = document.querySelector('.hero');
+
+    if (navbar && hero) {
+        const navbarHeight = navbar.offsetHeight; // Obtén la altura del navbar
+        hero.style.marginTop = `${navbarHeight}px`; // Ajusta el margen superior del Hero dinámicamente
+    }
+});
