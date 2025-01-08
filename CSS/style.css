@@ -302,15 +302,14 @@ button:active {
 }
 
 .carousel-container {
-    width: 90%; /* O un ancho fijo, como 800px */
-    margin: 1rem;
-    margin-top: 4rem;
-    height: 80vh; /* Fija la misma altura que las imágenes */
+    position: relative; /* Necesario para que los controles se posicionen correctamente */
+    width: 100%;
+    margin: 40px 20px;
+    height: 80vh; /* Ajusta el tamaño del carrusel */
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background: #fff;
-  }
+}
   
   
   /* Carousel */
@@ -326,6 +325,17 @@ button:active {
     object-fit: cover; /* Asegura que la imagen se recorte para ajustarse sin deformarse */
     border-radius: 10px; /* Mantén las esquinas redondeadas si lo deseas */
   }
+
+  .carousel-item {
+    display: none; /* Oculta todos los slides por defecto */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Suaviza la transición entre slides */
+}
+
+.carousel-item.active {
+    display: block; /* Muestra el slide activo */
+    opacity: 1;
+}
   
   
   .carousel-item img {
@@ -334,27 +344,37 @@ button:active {
     border-radius: 10px;
   }
   
-  /* Controls */
   .carousel-controls {
     display: flex;
-    justify-content: space-between;
-    position: relative;
-    top: -2.5rem;
-  }
-  
-  button {
-    border: none;
+    justify-content: space-between; /* Ubica los botones a los lados */
+    position: absolute; /* Asegura que los botones estén posicionados dentro del carrusel */
+    top: 50%; /* Centra verticalmente en el carrusel */
+    left: 0; /* Alinea con el borde izquierdo del contenedor */
+    right: 0; /* Alinea con el borde derecho del contenedor */
+    transform: translateY(-50%); /* Centra perfectamente verticalmente */
+    z-index: 10; /* Asegura que estén sobre el contenido del carrusel */
+    pointer-events: none; /* Evita que bloqueen clics en las imágenes */
+    height: 100%; /* Asegura que los botones cubran toda la altura para ser más accesibles */
+    align-items: center; /* Centra los botones dentro del contenedor verticalmente */
+}
+
+button {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
     color: white;
     font-size: 2rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 50%; /* Forma redondeada */
+    border: none;
+    pointer-events: auto; /* Permite clics en los botones */
     transition: background 0.3s ease;
-  }
-  
-  button:hover {
-    background: rgba(0, 0, 0, 0.7);
-  }
+    position: relative; /* Asegura que no afecte al posicionamiento general */
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.7); /* Fondo más oscuro al pasar el mouse */
+}
+
 .footer {
     background-color: #000000 !important;
     margin-top: 64px;

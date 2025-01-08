@@ -83,4 +83,28 @@ nextBtn.addEventListener('click', () => {
 // Inicializa mostrando el primer slide
 showSlide(currentIndex);
 
-  
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll('.carousel-item');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        items.forEach((item, i) => {
+            if (i === index) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % items.length; // Incrementa el índice y reinicia si llega al final
+        showSlide(currentIndex);
+    }
+
+    // Llama a la función cada 3 segundos para avanzar al siguiente slide
+    setInterval(nextSlide, 3000);
+
+    // Inicializa mostrando el primer slide
+    showSlide(currentIndex);
+});
