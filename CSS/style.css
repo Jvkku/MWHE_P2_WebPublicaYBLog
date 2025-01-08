@@ -55,21 +55,21 @@ body {
 
 .navbar {
     position: fixed;
-    top: 20px; /* Espacio superior */
-    left: 20px; /* Espacio lateral izquierdo */
-    right: 20px; /* Espacio lateral derecho */
-    width: auto; /* Ajusta automáticamente según los lados */
-    z-index: 9999; /* Asegura que esté encima de otros elementos */
-    backdrop-filter: blur(10px); /* Fondo con efecto blur */
-    padding: 15px 20px; /* Espaciado interno */
-    border-radius: 12px; /* Bordes redondeados */
-    transition: top 0.3s ease-in-out; /* Transición suave para mostrar/ocultar */
+    top: 20px;
+    left: 20px; 
+    right: 20px; 
+    width: auto;
+    z-index: 9999; 
+    backdrop-filter: blur(10px); 
+    padding: 15px 20px; 
+    border-radius: 12px; 
+    transition: top 0.3s ease-in-out; 
 }
 
 .navbar .container {
-    max-width: 100%; /* Asegura que no se desborde */
-    padding: 0px; /* Espaciado interno a los lados */
-    background-color: transparent; /* Fondo transparente */
+    max-width: 100%; 
+    padding: 0px; 
+    background-color: transparent; 
 }
 
 .btn-menu:hover {
@@ -168,7 +168,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 24px;
-    margin: 100px auto 0 !important; /* Ajusta el margen superior para evitar solapamiento */
+    margin: 100px auto 0 !important; 
 }
 
 .video-container {
@@ -184,7 +184,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que el video ocupe todo el contenedor */
+    object-fit: cover; 
     z-index: 1;
 }
 
@@ -207,19 +207,19 @@ body {
     color: #75fb4c;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
     text-align: center;
-    width: 80%; /* Asegura que ocupe el ancho completo */
-    padding: 0 15px; /* Evita que el texto se salga en pantallas pequeñas */
-    box-sizing: border-box; /* Incluye el padding dentro del tamaño del contenedor */
+    width: 80%; 
+    padding: 0 15px; 
+    box-sizing: border-box; 
 }
 
 .text-content h1 {
-    font-size: 3.5rem; /* Ajusta tamaño para pantallas medianas */
+    font-size: 3.5rem; 
     font-weight: bold;
     color: #75fb4c !important;
     font-family: 'Akony', sans-serif;
     text-align: center;
-    line-height: 1.2; /* Asegura un buen espaciado entre líneas */
-    word-wrap: break-word; /* Evita desbordamientos */
+    line-height: 1.2; 
+    word-wrap: break-word; 
 }
 
 .text-content p {
@@ -284,37 +284,37 @@ body {
 }
 
 .card-title {
-    font-size: 1.5rem; /* Aumenta el tamaño del título */
+    font-size: 1.5rem; 
     font-weight: bold;
-    margin-bottom: 0.5rem; /* Espaciado más grande debajo del título */
+    margin-bottom: 0.5rem; 
 }
 
 .card-text {
-    font-size: 1.1rem; /* Aumenta el tamaño del texto */
-    margin-bottom: 0.5rem; /* Añade un poco de espacio debajo del texto */
+    font-size: 1.1rem; 
+    margin-bottom: 0.5rem; 
 }
 
 .btn-buy {
-    background-color: #75fb4c; /* Fondo verde */
-    color: #ffffff; /* Texto blanco */
+    background-color: #75fb4c; 
+    color: #ffffff; 
     font-weight: bold;
-    border: none; /* Sin bordes */
-    padding: 10px 18px; /* Aumenta el espaciado interno */
-    border-radius: 12px; /* Bordes más redondeados */
-    font-size: 1rem; /* Aumenta el tamaño de la fuente */
+    border: none; 
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 1rem; 
     display: inline-block;
     text-align: center;
-    cursor: pointer; /* Cursor tipo mano */
-    margin-top: 10px; /* Espaciado superior más uniforme */
+    cursor: pointer;
+    margin-top: 10px; 
 }
 
 .btn-buy:hover {
-    background-color: #ffffff; /* Fondo blanco al pasar el mouse */
-    color: #000000; /* Texto negro */
+    background-color: #ffffff; 
+    color: #000000; 
 }
 
 .btn-buy:active {
-    transform: scale(0.95); /* Efecto de presión */
+    transform: scale(0.95); 
 }
 
 .photos {
@@ -324,80 +324,77 @@ body {
 }
 
 .carousel-container {
-    position: relative; /* Necesario para que los controles se posicionen correctamente */
+    position: relative; 
     width: 100%;
     margin: 0 10px;
-    height: 80vh; /* Ajusta el tamaño del carrusel */
+    height: 80vh; 
     overflow: hidden;
     border-radius: 10px;
     background: #fff;
 }
   
   
-  /* Carousel */
-  .carousel {
+.carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-  }
+}
   
-  /* Carousel Item */
-  .carousel-item img {
-    width: 100%; /* Mantén el ancho al 100% del contenedor */
-    height: 80vh; /* Define una altura fija (puedes ajustarla a tus necesidades) */
-    object-fit: cover; /* Asegura que la imagen se recorte para ajustarse sin deformarse */
-    border-radius: 10px; /* Mantén las esquinas redondeadas si lo deseas */
-  }
+.carousel-item img {
+    width: 100%;
+    height: 80vh; 
+    object-fit: cover; 
+    border-radius: 10px;
+}
 
-  .carousel-item {
-    display: none; /* Oculta todos los slides por defecto */
+.carousel-item {
+    display: none; 
     opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Suaviza la transición entre slides */
+    transition: opacity 0.5s ease-in-out; 
 }
 
 .carousel-item.active {
-    display: block; /* Muestra el slide activo */
+    display: block; 
     opacity: 1;
 }
   
-  
-  .carousel-item img {
+.carousel-item img {
     width: 100%;
     display: block;
     border-radius: 10px;
-  }
+}
   
-  .carousel-controls {
+.carousel-controls {
     display: flex;
-    justify-content: space-between; /* Ubica los botones a los lados */
-    position: absolute; /* Asegura que los botones estén posicionados dentro del carrusel */
-    top: 50%; /* Centra verticalmente en el carrusel */
-    left: 0; /* Alinea con el borde izquierdo del contenedor */
-    right: 0; /* Alinea con el borde derecho del contenedor */
-    transform: translateY(-50%); /* Centra perfectamente verticalmente */
-    z-index: 10; /* Asegura que estén sobre el contenido del carrusel */
-    pointer-events: none; /* Evita que bloqueen clics en las imágenes */
-    height: 100%; /* Asegura que los botones cubran toda la altura para ser más accesibles */
-    align-items: center; /* Centra los botones dentro del contenedor verticalmente */
-    opacity: 0; /* Totalmente transparente por defecto */
-    pointer-events: none; /* Evita clics cuando están transparentes */
-    transition: opacity 0.3s ease; /* Suaviza la transición */
+    justify-content: space-between;
+    position: absolute;
+    top: 50%; 
+    left: 0; 
+    right: 0;
+    transform: translateY(-50%); 
+    z-index: 10; 
+    pointer-events: none; 
+    height: 100%; 
+    align-items: center; 
+    opacity: 0; 
+    pointer-events: none; 
+    transition: opacity 0.3s ease; 
 }
 
 .carousel-container:hover .carousel-controls {
-    opacity: 1; /* Totalmente visible cuando el carrusel está en hover */
-    pointer-events: auto; /* Permite la interacción */
+    opacity: 1; 
+    pointer-events: auto; 
 }
 
 button {
-    background-color: #75fb4c; /* Fondo negro como el botón de menú */
-    color: #ffffff; /* Texto blanco */
+    background-color: #75fb4c; 
+    color: #ffffff;
     font-size: 3rem;
-    padding: 0 20px; /* Espaciado interno */
+    padding: 0 20px;
     cursor: pointer;
-    border-radius: 12px; /* Bordes redondeados similares */
-    border: none; /* Sin bordes */
-    pointer-events: auto; /* Permite clics */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Animaciones suaves */
+    border-radius: 12px;
+    border: none;
+    pointer-events: auto; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
     position: relative;
     display: flex;
     align-items: center;
@@ -414,12 +411,12 @@ button {
 }
 
 button:hover {
-    background-color: #ffffff; /* Fondo blanco al pasar el mouse */
-    color: #000000; /* Texto negro al pasar el mouse */
+    background-color: #ffffff; 
+    color: #000000;
 }
 
 button:active {
-    transform: scale(0.95); /* Efecto de presión */
+    transform: scale(0.95);
 }
 
 .marquee {
@@ -606,21 +603,21 @@ button:active {
     }
 
     .btn-yellow {
-        background-color: #000000; /* Fondo negro */
-        color: #ffffff; /* Texto blanco */
+        background-color: #000000; 
+        color: #ffffff; 
         font-weight: bold;
-        border: none; /* Sin bordes */
-        padding: 14px 20px; /* Mismo espaciado que el botón de menú */
-        border-radius: 12px; /* Bordes redondeados */
+        border: none; 
+        padding: 14px 20px; 
+        border-radius: 12px; 
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: background-color 0.3s ease; /* Transición suave */
+        transition: background-color 0.3s ease; 
     }
     
     .btn-yellow:hover {
-        background-color: #ffffff; /* Cambia a blanco al pasar el mouse */
-        color: #000000; /* Cambia a negro al pasar el mouse */
+        background-color: #ffffff; 
+        color: #000000; 
     }
 
     .fa-magnifying-glass {
@@ -656,15 +653,15 @@ button:active {
     }
 
     .text-content h1 {
-        font-size: 2.5rem; /* Reduce tamaño en móviles */
+        font-size: 2.5rem; 
     }
 
     .text-content p {
-        font-size: 0.9rem; /* Ajusta el tamaño del texto */
+        font-size: 0.9rem; 
     }
 
     .btn-pink {
-        font-size: 1rem; /* Reduce tamaño del botón */
+        font-size: 1rem; 
         padding: 8px 16px;
     }
 
