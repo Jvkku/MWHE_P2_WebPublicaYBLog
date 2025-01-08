@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function toggleMenu() {
         menuOptions.classList.toggle("d-none");
-        menuButton.classList.toggle("active"); // Cambiar color del botón activo
+        menuButton.classList.toggle("active");
     }
 
     menuButton.addEventListener("click", function (event) {
@@ -44,7 +44,7 @@ function searchFunction() {
     }
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
     $('.marquee').marquee({
         duration: 8000,
         gap: 20,
@@ -54,33 +54,28 @@ $(document).ready(function(){
     });
 });
 
-const items = document.querySelectorAll('.carousel-item'); // Selecciona todos los slides
-const prevBtn = document.querySelector('.prev-btn'); // Botón anterior
-const nextBtn = document.querySelector('.next-btn'); // Botón siguiente
+const items = document.querySelectorAll('.carousel-item');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+let currentIndex = 0;
 
-let currentIndex = 0; // Índice del slide activo
-
-// Función para mostrar un slide específico
 function showSlide(index) {
-  items.forEach((item, i) => {
-    item.classList.remove('active'); // Oculta todos los slides
-  });
-  items[index].classList.add('active'); // Muestra el slide correspondiente
+    items.forEach((item, i) => {
+        item.classList.remove('active');
+    });
+    items[index].classList.add('active');
 }
 
-// Evento para ir al slide anterior
 prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + items.length) % items.length; // Índice circular
-  showSlide(currentIndex);
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    showSlide(currentIndex);
 });
 
-// Evento para ir al siguiente slide
 nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % items.length; // Índice circular
-  showSlide(currentIndex);
+    currentIndex = (currentIndex + 1) % items.length;
+    showSlide(currentIndex);
 });
 
-// Inicializa mostrando el primer slide
 showSlide(currentIndex);
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -98,57 +93,48 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function nextSlide() {
-        currentIndex = (currentIndex + 1) % items.length; // Incrementa el índice y reinicia si llega al final
+        currentIndex = (currentIndex + 1) % items.length;
         showSlide(currentIndex);
     }
 
-    // Llama a la función cada 3 segundos para avanzar al siguiente slide
     setInterval(nextSlide, 3000);
-
-    // Inicializa mostrando el primer slide
     showSlide(currentIndex);
 });
 
-let lastScrollTop = 0; // Guarda la posición previa del scroll
-const navbar = document.querySelector('.navbar'); // Selecciona la navbar
+let lastScrollTop = 0;
+const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop) {
-        // Usuario está desplazándose hacia abajo
-        navbar.style.top = '-100px'; // Oculta la navbar (ajusta este valor según el tamaño de tu navbar)
+        navbar.style.top = '-100px';
     } else {
-        // Usuario está desplazándose hacia arriba
-        navbar.style.top = '0'; // Muestra la navbar
+        navbar.style.top = '0';
     }
 
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.querySelector('.navbar');
     const hero = document.querySelector('.hero');
-    let lastScrollTop = 0; // Guarda la posición previa del scroll
+    let lastScrollTop = 0;
 
-    // Ajusta el margen del Hero dinámicamente
     if (navbar && hero) {
-        const navbarHeight = navbar.offsetHeight; // Obtén la altura del navbar
-        hero.style.marginTop = `${navbarHeight + 20}px`; // Ajusta el margen superior del Hero
+        const navbarHeight = navbar.offsetHeight;
+        hero.style.marginTop = `${navbarHeight + 20}px`;
     }
 
-    // Manejo del scroll para mostrar/ocultar el navbar
     window.addEventListener('scroll', () => {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
         if (scrollTop > lastScrollTop) {
-            // Usuario hace scroll hacia abajo
-            navbar.style.top = '-100px'; // Oculta el navbar
+            navbar.style.top = '-100px';
         } else {
-            // Usuario hace scroll hacia arriba
-            navbar.style.top = '10px'; // Muestra el navbar con espacio superior
+            navbar.style.top = '10px';
         }
 
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
 });
