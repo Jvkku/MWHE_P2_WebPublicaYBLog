@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANTÍDOTO CLUB</title>
-    <link rel="icon" href="media/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="media/img/AC_Favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
@@ -12,17 +12,17 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <nav class="navbar">
             <div class="container">
                 <div class="menu-container">
                     <button id="menuButton" class="btn btn-menu">Menú</button>
                     <div id="menuOptions" class="menu-options d-none">
-                        <a href="index.html" class="btn btn-menu-option">Principal</a>
-                        <a href="news.html" class="btn btn-menu-option">Noticias</a>
+                        <a href="#gallery" class="btn btn-menu-option">Próximos</a>
+                        <a href="#photos" class="btn btn-menu-option">Galería</a>
                     </div>
                 </div>
                 <a class="logo navbar-brand position-absolute top-50 start-50 translate-middle text-center" href="index.html">
-                    <img src="media/img/AC_Logo_Black.png" alt="AC Logo" style="height: 50px;">
+                    <img src="media/img/AC_Logo_White.svg" alt="AC Logo" style="height: 60px;">
                 </a>
                 <div class="d-none d-md-flex search ms-3">
                     <input type="text" class="form-control" placeholder="Buscar aquí..." id="searchInput">
@@ -46,10 +46,7 @@
                 </div>
                 <div class="col-md-5 text-content">
                     <h1 class="display-1 text-primary">NUEVAS FECHAS</h1>
-                    <p class="lead">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta provident, expedita beatae rerum iste dicta cumque, voluptatum totam error fugiat id dignissimos quo eos perferendis, qui quam. Nesciunt, aliquid quibusdam.
-                    </p>
-                    <a href="#" class="btn btn-pink btn-lg">Saber más</a>
+                    <a href="#gallery" class="btn btn-pink btn-lg">Saber más</a>
                 </div>
             </div>
         </div>
@@ -57,75 +54,70 @@
 
     <div class="marquee-container">
         <div class="marquee">
-            <span>Placeholder Text - Marquee Between Hero and CardsPlaceholder Text - Marquee Between Hero and Cards</span>
+            <span>Shows 2024 // Shows 2024 // Shows 2024 // Shows 2024 // </span>
         </div>
     </div>
 
-    <section class="gallery container-fluid mt-5">
-        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-4">
+    <section id="gallery" class="gallery container-fluid mt-5">
+        <div class="row row-cols-1 row-cols-md- row-cols-lg-3 g-4">
             <!-- Primera card -->
             <div class="col">
                 <div class="card">
-                    <img src="media/img/Cartel1.jpg" class="card-img-top" alt="1">
+                    <img src="media/img/Cartel1.jpg" class="card-img-top" alt="Cartel 1">
                     <div class="card-body">
-                        <h5 class="card-title">vgrbre</h5>
-                        <p class="card-text">wbgrrtgb</p>
-                        <p class="event-location">wrbtgwrgb</p>
+                        <h5 class="card-title">Antídoto Club</h5>
+                        <p class="card-text">Madrid - 07/11</p>
+                        <button class="btn-buy">Comprar</button>
                     </div>
                 </div>
             </div>
-            <!-- Segunda card -->
             <div class="col">
                 <div class="card">
-                    <img src="media/img/Cartel2.jpg" class="card-img-top" alt="2">
+                    <img src="media/img/Cartel2.jpg" class="card-img-top" alt="Cartel 2">
                     <div class="card-body">
-                        <h5 class="card-title">wrbtae</h5>
-                        <p class="card-text">wrbefva</p>
-                        <p class="event-location">adfver</p>
+                        <h5 class="card-title">Antídoto Club</h5>
+                        <p class="card-text">Madrid - 09/11</p>
+                        <button class="btn-buy">Comprar</button>
                     </div>
                 </div>
             </div>
-            <!-- Tercera card -->
             <div class="col">
                 <div class="card">
-                    <img src="media/img/Cartel3.jpg" class="card-img-top" alt="3">
+                    <img src="media/img/Cartel3.jpg" class="card-img-top" alt="Cartel 3">
                     <div class="card-body">
-                        <h5 class="card-title">thnbfd</h5>
-                        <p class="card-text">sadvrg</p>
-                        <p class="event-location">fdseztrg</p>
+                        <h5 class="card-title">Antídoto Club</h5>
+                        <p class="card-text">Madrid - 12/12</p>
+                        <button class="btn-buy">Comprar</button>
                     </div>
                 </div>
             </div>
-            <!-- Cuarta card -->
             <div class="col">
                 <div class="card">
-                    <img src="media/img/Cartel4.jpg" class="card-img-top" alt="4">
+                    <img src="media/img/Cartel4.jpg" class="card-img-top" alt="Cartel 4">
                     <div class="card-body">
-                        <h5 class="card-title">wefdgr</h5>
-                        <p class="card-text">cvtyhr</p>
-                        <p class="event-location">sdcvfbkr</p>
+                        <h5 class="card-title">Antídoto Club</h5>
+                        <p class="card-text">Madrid - 14/11</p>
+                        <button class="btn-buy">Comprar</button>
                     </div>
                 </div>
             </div>
-            <!-- Quinta card -->
             <div class="col">
                 <div class="card">
-                    <img src="media/img/Cartel5.jpg" class="card-img-top" alt="5">
+                    <img src="media/img/Cartel5.jpg" class="card-img-top" alt="Cartel 5">
                     <div class="card-body">
-                        <h5 class="card-title">sdfvbwrt</h5>
-                        <p class="card-text">sdfbstr</p>
-                        <p class="event-location">cijtbnd</p>
+                        <h5 class="card-title">Antídoto Club</h5>
+                        <p class="card-text">Madrid - 28/11</p>
+                        <button class="btn-buy">Comprar</button>
                     </div>
                 </div>
             </div>
-            <!-- Sexta card -->
             <div class="col">
                 <div class="card">
-                    <img src="media/img/Cartel6.jpg" class="card-img-top" alt="6">
+                    <img src="media/img/Cartel6.jpg" class="card-img-top" alt="Cartel 6">
                     <div class="card-body">
-                        <h5 class="card-title">asdvfjrt</h5>
-                        <p class="card-text">efvrtbj</p>
-                        <p class="event-location">wfhjvnwjkrd</p>
+                        <h5 class="card-title">Antídoto Club</h5>
+                        <p class="card-text">Madrid - 22/07</p>
+                        <button class="btn-buy">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -134,11 +126,11 @@
 
     <div class="marquee-container">
         <div class="marquee">
-            <span>Placeholder Text - Marquee Between Hero and CardsPlaceholder Text - Marquee Between Hero and Cards</span>
+            <span>Shows 2024 // Shows 2024 // Shows 2024 // Shows 2024 //</span>
         </div>
     </div>
     
-    <section class="photos">
+    <section id="photos" class="photos">
         <div class="carousel-container">
             <div class="carousel">
               <div class="carousel-item active">

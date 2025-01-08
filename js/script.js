@@ -129,9 +129,26 @@ window.addEventListener('scroll', () => {
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.querySelector('.navbar');
     const hero = document.querySelector('.hero');
+    let lastScrollTop = 0; // Guarda la posición previa del scroll
 
+    // Ajusta el margen del Hero dinámicamente
     if (navbar && hero) {
         const navbarHeight = navbar.offsetHeight; // Obtén la altura del navbar
-        hero.style.marginTop = `${navbarHeight}px`; // Ajusta el margen superior del Hero dinámicamente
+        hero.style.marginTop = `${navbarHeight + 20}px`; // Ajusta el margen superior del Hero
     }
+
+    // Manejo del scroll para mostrar/ocultar el navbar
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Usuario hace scroll hacia abajo
+            navbar.style.top = '-100px'; // Oculta el navbar
+        } else {
+            // Usuario hace scroll hacia arriba
+            navbar.style.top = '10px'; // Muestra el navbar con espacio superior
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita valores negativos
+    });
 });
