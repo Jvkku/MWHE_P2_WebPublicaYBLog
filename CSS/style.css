@@ -43,6 +43,11 @@ p {
     font-style: normal;
 }
 
+html, body {
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    width: 100%;
+}
+
 body {
     background-color: #75fb4c;
     color: #000000;  
@@ -128,8 +133,8 @@ body {
 }
 
 .menu-options a:hover {
-    background-color: #75fb4c;
-    color: #fff;
+    color: #75fb4c;
+    background-color: #fff;
 }
 
 .search {
