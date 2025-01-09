@@ -137,4 +137,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
+
+    
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"), // Contenedor principal
+        smooth: true, // Activar desplazamiento suave
+        lerp: 0.1 // Suavizado del scroll (ajusta el valor según necesidad)
+    });
+
+    // Refrescar scroll al cargar imágenes
+    scroll.on("call", (func, direction, obj) => {
+        if (func === "refresh") {
+            scroll.update();
+        }
+    });
 });

@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
 </head>
-<body>
+<body data-scroll-container>
     <header>
         <nav class="navbar">
             <div class="container">
@@ -19,6 +20,7 @@
                     <div id="menuOptions" class="menu-options d-none">
                         <a href="#gallery" class="btn btn-menu-option">Próximos</a>
                         <a href="#photos" class="btn btn-menu-option">Galería</a>
+                        <a href="https://antidotoclubblog.cargo.site/" class="btn btn-menu-option">Blog</a> 
                     </div>
                 </div>
                 <a class="logo navbar-brand position-absolute top-50 start-50 translate-middle text-center" href="index.html">
@@ -54,14 +56,13 @@
 
     <div class="marquee-container">
         <div class="marquee">
-            <span>Shows 2024 // Shows 2024 // Shows 2024 // Shows 2024 // </span>
+            <span>Shows 2025 // Shows 2025 // Shows 2025 // Shows 2025 // </span>
         </div>
     </div>
 
     <section id="gallery" class="gallery container-fluid mt-5">
         <div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 g-4">
-            <!-- Primera card -->
-            <div class="col">
+            <div class="col" data-scroll data-scroll-speed="1">
                 <div class="card">
                     <img src="media/img/Cartel1.jpg" class="card-img-top" alt="Cartel 1">
                     <div class="card-body">
@@ -70,8 +71,8 @@
                         <button class="btn-buy">Comprar</button>
                     </div>
                 </div>
-            </div>
-            <div class="col">
+            </div>    
+            <div class="col" data-scroll data-scroll-speed="2">
                 <div class="card">
                     <img src="media/img/Cartel2.jpg" class="card-img-top" alt="Cartel 2">
                     <div class="card-body">
@@ -81,7 +82,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" data-scroll data-scroll-speed="1">
                 <div class="card">
                     <img src="media/img/Cartel3.jpg" class="card-img-top" alt="Cartel 3">
                     <div class="card-body">
@@ -91,7 +92,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" data-scroll data-scroll-speed="2">
                 <div class="card">
                     <img src="media/img/Cartel4.jpg" class="card-img-top" alt="Cartel 4">
                     <div class="card-body">
@@ -101,7 +102,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" data-scroll data-scroll-speed="1">
                 <div class="card">
                     <img src="media/img/Cartel5.jpg" class="card-img-top" alt="Cartel 5">
                     <div class="card-body">
@@ -111,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" data-scroll data-scroll-speed="2">
                 <div class="card">
                     <img src="media/img/Cartel6.jpg" class="card-img-top" alt="Cartel 6">
                     <div class="card-body">
@@ -126,7 +127,7 @@
 
     <div class="marquee-container">
         <div class="marquee">
-            <span>Shows 2024 // Shows 2024 // Shows 2024 // Shows 2024 //</span>
+            <span>Shows 2025 // Shows 2025 // Shows 2025 // Shows 2025 //</span>
         </div>
     </div>
     
@@ -196,5 +197,6 @@
     <script src="js/script.js"></script>
     <script src="js/jquery.js"></script>
     <script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
 </body>
 </html>
