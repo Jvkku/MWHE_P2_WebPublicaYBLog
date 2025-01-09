@@ -117,31 +117,6 @@ window.addEventListener('scroll', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.querySelector('.navbar');
-    const hero = document.querySelector('.hero');
-    let lastScrollTop = 0;
-
-    if (navbar && hero) {
-        const navbarHeight = navbar.offsetHeight;
-        hero.style.marginTop = `${navbarHeight + 20}px`;
-    }
-
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > lastScrollTop) {
-            navbar.style.top = '-100px';
-        } else {
-            navbar.style.top = '10px';
-        }
-
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    });
-
-    
-});
-
-document.addEventListener("DOMContentLoaded", () => {
     const scroll = new LocomotiveScroll({
         el: document.querySelector("[data-scroll-container]"), // Contenedor principal
         smooth: true, // Activar desplazamiento suave

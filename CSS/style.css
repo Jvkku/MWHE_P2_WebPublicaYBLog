@@ -44,7 +44,7 @@ p {
 }
 
 html, body {
-    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    overflow-x: hidden;
     width: 100%;
 }
 
@@ -219,7 +219,7 @@ body {
 }
 
 .text-content h1 {
-    font-size: 3.5rem; 
+    font-size: 4.5rem; 
     font-weight: bold;
     color: #75fb4c !important;
     font-family: 'Akony', sans-serif;
